@@ -1,0 +1,76 @@
+/* Basic reset */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: "Helvetica Neue", Arial, sans-serif; color: #3b4e49; line-height: 1.5; }
+
+/* Utility container: center content and limit width */
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+/* HEADER */
+.site-header { padding: 22px 0; }
+.header-inner { display: flex; justify-content: space-between; align-items: center; }
+
+/* Logo (left) */
+.logo h1 {
+  font-weight: 300;
+  font-size: 36px;
+  color: #4d6b66;
+  line-height: 0.9;
+}
+.logo span { font-weight: 700; font-size: 36px; }
+
+/* Header right: date and nav stacked */
+.header-right { text-align: right; }
+.event-date { font-size: 14px; color: #7f9b97; margin-bottom: 6px; }
+.main-nav a {
+  text-decoration: none;
+  color: #7f9b97;
+  font-size: 13px;
+  margin-left: 14px;
+}
+
+/* HERO */
+.hero { padding: 50px 0; background: #fff; text-align: center; }
+.hero-inner { max-width: 800px; margin: 0 auto; }
+.hero-title {
+  font-weight: 300;
+  font-size: 36px;
+  color: #5a7a76;
+  margin-bottom: 14px;
+}
+.hero-sub { color: #9aa9a6; font-size: 18px; margin-bottom: 24px; }
+
+/* Ghost button */
+.btn-ghost {
+  background: transparent;
+  border: 2px solid #d7e1df;
+  padding: 12px 28px;
+  border-radius: 6px;
+  color: #5a7a76;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+/* FEATURES: 3-column grid */
+.features { padding: 30px 0 60px 0; }
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  align-items: start;
+}
+.feature-title.small { color: #9aa9a6; font-size: 12px; letter-spacing: 1px; margin-bottom: 8px; text-transform: uppercase; }
+.feature-heading { color: #5a7a76; font-weight: 400; margin-bottom: 8px; }
+.feature-text { color: #9aa9a6; font-size: 14px; }
+
+/* FOOTER */
+.site-footer { border-top: 1px solid #eef2f1; padding: 18px 0; color: #9aa9a6; }
+.footer-inner { display:flex; justify-content: space-between; align-items: center; font-size: 14px; }
+
+/* Responsive: stack on small screens */
+@media (max-width: 800px) {
+  .header-inner { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .main-nav a { margin-left: 8px; }
+  .hero-title { font-size: 26px; }
+  .features-grid { grid-template-columns: 1fr; }
+  .footer-inner { flex-direction: column; gap: 8px; text-align: center; }
+}
